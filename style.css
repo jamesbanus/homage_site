@@ -84,7 +84,7 @@ article1 {
   width: 100%;
   height: auto;
 }
-article1 video {
+article1 .mandalorian {
   width: 100%;
   height: auto;
   vertical-align: bottom;
@@ -149,6 +149,14 @@ article1 .contentContainerMandolorian .contentBody .button2 p {
   font-weight: 600;
   padding: 0;
   line-height: 1.2;
+}
+
+.mandalorianContainer2 {
+  display: none;
+}
+
+.contentContainerMandolorian2 {
+  display: none;
 }
 
 article2 {
@@ -570,7 +578,7 @@ article3 .terms {
   transform: scale(1.03);
   transition: transform 0.5s ease;
 }
-.showsContainer .imgContainer .logoContainer {
+.showsContainer .imgContainer .logoContainer1 {
   padding: 0px 24px 24px 24px;
   margin-top: 12px;
   position: absolute;
@@ -580,14 +588,27 @@ article3 .terms {
   right: 0px;
   text-align: center;
 }
-.showsContainer .imgContainer .logoContainer .logo {
+.showsContainer .imgContainer .logoContainer1 .logo {
   height: 83px;
 }
-.showsContainer .imgContainer .logoContainer .p1 {
+.showsContainer .imgContainer .logoContainer1 .p1 {
   font-size: 14px;
   margin: 0;
 }
-.showsContainer .imgContainer .logoContainer .p2 {
+.showsContainer .imgContainer .logoContainer2 {
+  padding: 0px 24px 24px 24px;
+  margin-top: 12px;
+  position: absolute;
+  height: 103px;
+  bottom: 5px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.showsContainer .imgContainer .logoContainer2 .logo {
+  height: 83px;
+}
+.showsContainer .imgContainer .logoContainer2 .p2 {
   font-size: 14px;
   margin: 0;
   color: #ffffff;
@@ -679,4 +700,114 @@ footer li {
 footer p {
   padding-top: 20px;
   font-size: 12px;
+}
+
+@media screen and (min-width: 668px) {
+  .showsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .showsContainer .imgContainer .logoContainer1 {
+    padding: 0px 24px 16px 24px;
+    bottom: -35px;
+  }
+  .showsContainer .imgContainer .logoContainer1 .logo {
+    width: 50%;
+    height: auto;
+  }
+  .showsContainer .imgContainer .logoContainer2 {
+    padding: 0px 24px 16px 24px;
+    bottom: -5px;
+  }
+  .showsContainer .imgContainer .logoContainer2 .logo {
+    width: 50%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 680px) {
+  article1 {
+    display: none;
+  }
+  .mandalorianContainer2 {
+    display: contents;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+  }
+  .mandalorianContainer2 .mandalorian2 {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 20px 25px 30px 25px;
+    box-sizing: border-box;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody .contentBodyDetail {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody p {
+    color: #ffffff;
+    height: 24px;
+    width: 100%;
+    margin: 8px 0px 0px 0px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 15.1px;
+    cursor: pointer;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody .button2 {
+    display: flex;
+    width: 174px;
+    height: 14px;
+    padding: 16px 32px 16px 32px;
+    border: 1px solid #2e7d49;
+    border-radius: 24px;
+    background-color: #2e7d49;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 12px 12px 0px 12px;
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody .button2:hover {
+    background-color: rgba(46, 125, 74, 0.9411764706);
+    border: 1px solid rgba(46, 125, 74, 0.9411764706);
+  }
+  .mandalorianContainer2 .contentContainerMandolorian2 .contentBody .button2 p {
+    width: 138.773px;
+    height: 16px;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+    line-height: 1.2;
+  }
 }/*# sourceMappingURL=style.css.map */
