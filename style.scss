@@ -1,3 +1,157 @@
+// Mixin rules for later use
+
+// rules for subscribe buttons
+@mixin buttonRules($background, $change) {
+  display: flex;
+  width: 174px;
+  height: 14px;
+  padding: 16px 32px 16px 32px;
+  border: 1px solid $background;
+  border-radius: 24px;
+  background-color: $background;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: $change;
+    border: 1px solid $change;
+  }
+  p {
+    width: 138.773px;
+    height: 16px;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    font-size: 15.6px;
+    font-weight: 600;
+    padding: 0;
+    line-height: 1.2;
+  }
+}
+
+// rules for the standard boxes of content
+@mixin box-rules {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+  height: max-content;
+
+  img {
+    width: 100%;
+  }
+
+  p:first-of-type {
+    padding: 20px 20px 0px 20px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  p:nth-of-type(2) {
+    font-size: 13.3px;
+    padding: 0px 20px 0px 20px;
+    margin: 10.08px 0px 0px 0px;
+  }
+
+  p:nth-of-type(3) {
+    font-size: 12px;
+    padding: 0px 20px 20px 20px;
+    margin: 20px 0px 0px 0px;
+    font-weight: 700;
+  }
+}
+
+// rules for grid elements
+@mixin gridRules {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
+  padding: 18px 23px 16px 23px;
+  column-gap: 20px;
+
+  .imgContainer {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      vertical-align: bottom;
+      cursor: pointer;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s ease;
+    }
+  }
+  .pContainer {
+    text-align: left;
+    padding: 0;
+    margin-top: 8px;
+
+    p {
+      padding: 0;
+      font-size: 18px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// rules for headers between elements
+@mixin titleRules {
+  padding: 16px 23px 0px 23px;
+  text-align: center;
+  font-size: 24px;
+  background-color: #f1f2f3;
+}
+
+// rules for a couple of containers different to the boxes
+@mixin singleContainerRules($background, $width) {
+  padding: 8px 23px 16px 23px;
+  overflow: hidden;
+  background-color: #f1f2f3;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  .imageContainer {
+    overflow: hidden;
+    img {
+      width: 100%;
+      background-color: $background;
+      cursor: pointer;
+      vertical-align: bottom;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    padding: 20px 25px 50px 25px;
+    img {
+      width: $width;
+      cursor: pointer;
+    }
+    p:first-of-type {
+      margin: 8px 0px 0px 0px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    p:nth-of-type(2) {
+      padding-top: 15px;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// set rules for body
 body {
   margin: 0;
   padding: 0;
@@ -8,12 +162,14 @@ body {
   color: #000000;
 }
 
+// nav bar
 nav {
   height: 65px;
   max-width: 1600px;
   padding: 0 60px 0 60px;
   background-color: #ffffff;
   text-align: center;
+  position: relative;
 
   .button {
     position: absolute;
@@ -50,6 +206,7 @@ nav {
   }
 }
 
+// video section
 article1 {
   width: 100%;
   height: auto;
@@ -95,86 +252,14 @@ article1 {
       }
 
       .button2 {
-        display: flex;
-        width: 174px;
-        height: 14px;
-        padding: 16px 32px 16px 32px;
-        border: 1px solid #2e7d49;
+        @include buttonRules(#2e7d49, #2e7d4af0);
         margin: 12px 12px 0px 12px;
-        border-radius: 24px;
-        background-color: #2e7d49;
-        justify-content: center;
-        cursor: pointer;
-
-        p {
-          position: relative;
-          width: 138.773px;
-          height: 16px;
-          color: #ffffff;
-          margin: 0;
-          text-align: center;
-          font-size: 15.6px;
-          font-weight: 600;
-          top: -4px;
-        }
-      }
-
-      .button2:hover {
-        background-color: #2e7d4af0;
-        border: 1px solid #2e7d4af0;
       }
     }
   }
 }
 
-.button2:hover {
-  background-color: #050e08;
-  //   transition: 1000ms linear;
-}
-
-@mixin box-rules {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  border-radius: 4px;
-  background-color: #ffffff;
-  overflow: hidden;
-  cursor: pointer;
-  height: max-content;
-}
-
-@mixin img-rules {
-  width: 100%;
-}
-
-@mixin firstP {
-  padding: 20px 20px 0px 20px;
-  margin: 0;
-  font-size: 20px;
-}
-
-@mixin secondP {
-  font-size: 13.3px;
-  padding: 0px 20px 0px 20px;
-  margin: 10.08px 0px 0px 0px;
-}
-
-@mixin thirdP {
-  font-size: 12px;
-  padding: 0px 20px 20px 20px;
-  margin: 20px 0px 0px 0px;
-  font-weight: 700;
-}
-
-// article2 {
-//   min-width: 260px;
-//   padding: 8px 23px 16px 23px;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: 1fr 1fr 1fr 1fr;
-//   background-color: #f1f2f3;
-//   row-gap: 20px;
-
+// 4 boxes of content
 article2 {
   min-width: 260px;
   padding: 8px 23px 16px 23px;
@@ -185,79 +270,193 @@ article2 {
 
   .box1 {
     @include box-rules();
-
-    img {
-      @include img-rules();
-    }
-
-    p:first-of-type {
-      @include firstP();
-    }
-
-    p:nth-of-type(2) {
-      @include secondP();
-    }
-
-    p:nth-of-type(3) {
-      @include thirdP();
-    }
   }
   .box2 {
     @include box-rules();
-
-    img {
-      @include img-rules();
-    }
-
-    p:first-of-type {
-      @include firstP();
-    }
-
-    p:nth-of-type(2) {
-      @include secondP();
-    }
-
-    p:nth-of-type(3) {
-      @include thirdP();
-    }
   }
-
   .box3 {
     @include box-rules();
-
-    img {
-      @include img-rules();
-    }
-
-    p:first-of-type {
-      @include firstP();
-    }
-
-    p:nth-of-type(2) {
-      @include secondP();
-    }
-
-    p:nth-of-type(3) {
-      @include thirdP();
-    }
   }
   .box4 {
     @include box-rules();
+  }
+}
 
+// box containig info on tv shows
+article3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #030c40;
+  text-align: center;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+
+  p:first-of-type {
+    padding: 16px 23px 0px 23px;
+    height: 28px;
+    margin: 0;
+    font-size: 24px;
+    cursor: auto;
+  }
+
+  .gridContainer1 {
+    @include gridRules();
+  }
+  .bannerContainer {
+    padding: 0px 23px 8px 23px;
+    overflow: hidden;
     img {
-      @include img-rules();
-    }
-
-    p:first-of-type {
-      @include firstP();
-    }
-
-    p:nth-of-type(2) {
-      @include secondP();
-    }
-
-    p:nth-of-type(3) {
-      @include thirdP();
+      width: 100%;
     }
   }
+  .button3 {
+    @include buttonRules(#016ef5, #016ff5f0);
+    margin: 0px 0px 8px 0px;
+  }
+  .terms {
+    font-size: 13.2px;
+    padding: 0px 23px 16px 23px;
+  }
+}
+
+// header
+.shop {
+  @include titleRules();
+}
+
+// one off container
+.shopContainer {
+  @include singleContainerRules(#002453, 300px);
+}
+
+.shopContainer:hover .shopImg {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
+}
+
+// header
+.parks {
+  @include titleRules();
+}
+
+// one off container
+.parksContainer {
+  @include singleContainerRules(#000000, 511px);
+}
+
+.parksContainer:hover .parkImg {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
+}
+
+// 2 boxes of content
+.article4 {
+  min-width: 260px;
+  padding: 8px 23px 16px 23px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f2f3;
+  gap: 20px;
+
+  .box5 {
+    @include box-rules();
+  }
+  .box6 {
+    @include box-rules();
+  }
+}
+
+// header
+.shows {
+  @include titleRules();
+}
+
+// container with theatre posters, use positioning as
+// logos need to go on top of image
+.showsContainer {
+  padding: 8px 23px 16px 23px;
+  background-color: #f1f2f3;
+
+  .imgContainer {
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+    width: 100%;
+
+    .img {
+      width: 100%;
+      &:hover {
+        transform: scale(1.03);
+        transition: transform 0.5s ease;
+      }
+    }
+
+    .logoContainer {
+      padding: 0px 24px 24px 24px;
+      margin-top: 12px;
+      position: absolute;
+      height: 103px;
+      bottom: 0px + 5px;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+
+      .logo {
+        height: 83px;
+      }
+
+      .p1 {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .p2 {
+        font-size: 14px;
+        margin: 0;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// header
+.movies {
+  @include titleRules();
+}
+
+// matches grid element from tv shows box
+.gridContainer2 {
+  @include gridRules();
+  background-color: #f1f2f3;
+}
+
+.followDisney {
+  padding: 16px 23px 0px 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+
+  p {
+    font-size: 18px;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    gap: 13px;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+footer {
+  padding: 32px 0px 32px 0px;
 }
