@@ -132,6 +132,7 @@ article1 .contentContainerMandolorian .contentBody .button2 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
   margin: 12px 12px 0px 12px;
 }
 article1 .contentContainerMandolorian .contentBody .button2:hover {
@@ -344,6 +345,7 @@ article3 .button3 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden;
   margin: 0px 0px 8px 0px;
 }
 article3 .button3:hover {
