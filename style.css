@@ -88,6 +88,7 @@ article1 .mandalorian {
   width: 100%;
   height: auto;
   vertical-align: bottom;
+  display: inline-block;
 }
 article1 .contentContainerMandolorian {
   display: flex;
