@@ -247,11 +247,15 @@ article1 {
   width: 100%;
   height: auto;
 
-  .mandalorian {
-    width: 100%;
-    height: auto;
-    vertical-align: bottom;
+  .mandalorianContainer {
     display: inline-block;
+    width: 100%;
+
+    .mandalorian {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+    }
   }
 
   .contentContainerMandolorian {

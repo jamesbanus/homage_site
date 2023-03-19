@@ -84,11 +84,14 @@ article1 {
   width: 100%;
   height: auto;
 }
-article1 .mandalorian {
+article1 .mandalorianContainer {
+  display: inline-block;
+  width: 100%;
+}
+article1 .mandalorianContainer .mandalorian {
   width: 100%;
   height: auto;
   vertical-align: bottom;
-  display: inline-block;
 }
 article1 .contentContainerMandolorian {
   display: flex;
