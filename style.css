@@ -93,11 +93,13 @@ article1 {
 article1 .mandalorianContainer {
   width: 100%;
   font-size: 0px;
+  background-color: #000000;
 }
 article1 .mandalorianContainer .mandalorian {
   width: 100%;
   height: auto;
   display: block;
+  background-color: #000000;
 }
 article1 .contentContainerMandolorian {
   display: flex;
