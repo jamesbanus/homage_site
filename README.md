@@ -11,3 +11,5 @@ I couldn't get hold of Disney's font (InspreTWDC) anywhere so I used the closest
 As we are unable to program clicks on CSS (as far as I am aware) I made the mobile menu open on hover, to try and replicate the click behaviour.
 
 There are 2 carousels which actually look broken on the real site, rather than try to replicate something with images half off the page, I decided to make it neater (maybe even better! ;) so these aren't identical.
+
+By the time you read this some content will have changed on the site, hopefully not too much. It has thrown me out a few times!
