@@ -91,6 +91,7 @@ article1 {
 }
 article1 .mandalorianContainer {
   width: 100%;
+  font-size: 0;
 }
 article1 .mandalorianContainer .mandalorian {
   width: 100%;
