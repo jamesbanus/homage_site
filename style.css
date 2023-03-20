@@ -88,6 +88,7 @@ nav2 {
 article1 {
   width: 100%;
   height: auto;
+  display: block;
 }
 article1 .mandalorianContainer {
   display: block;
