@@ -1,6 +1,6 @@
 # Homage_site Project
 
-## A homage of [www.disney.co.uk](www.disney.co.uk) using html, css and scss
+## A homage of [disney.co.uk](https://www.disney.co.uk/) using html, css and scss
 
 [Link to Live Project on Netlify](https://lucky-liger-cbcd74.netlify.app/)
 
