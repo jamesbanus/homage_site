@@ -33,3 +33,16 @@ Todo:
 # Extended Syntax
 
 | Name | Age | Location |
+| ---- | --- | -------- |
+| This | Is  | Table    |
+
+```
+.demo {
+    background-color: red;
+}
+```
+
+Link to footnote [^1]
+
+Item 1
+~~Item 2~~

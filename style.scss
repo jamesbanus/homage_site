@@ -39,10 +39,14 @@
   background-color: #ffffff;
   overflow: hidden;
   cursor: pointer;
-  height: max-content;
+  //   height: max-content;
 
-  img {
+  .img1 {
     width: 100%;
+  }
+
+  .img2 {
+    display: none;
   }
 
   p:first-of-type {
@@ -55,6 +59,7 @@
     font-size: 13.3px;
     padding: 0px 20px 0px 20px;
     margin: 10.08px 0px 0px 0px;
+    flex-grow: 1;
   }
 
   p:nth-of-type(3) {
@@ -106,6 +111,13 @@
   padding: 16px 23px 0px 23px;
   text-align: center;
   font-size: 24px;
+  background-color: #f1f2f3;
+}
+
+@mixin titleRules2 {
+  padding: 24px 48px 0px 48px;
+  text-align: center;
+  font-size: 30px;
   background-color: #f1f2f3;
 }
 
@@ -218,6 +230,7 @@ nav {
             height: 61px;
             top: 49px;
             left: -56px;
+            z-index: 1;
           }
           p {
             padding-top: 25px;
@@ -240,6 +253,10 @@ nav {
 
 .button .burger:hover .menu {
   display: initial;
+}
+
+nav2 {
+  display: none;
 }
 
 // video section
@@ -341,7 +358,7 @@ article3 {
   justify-content: center;
   align-items: center;
 
-  p:first-of-type {
+  .whatsNew {
     padding: 16px 23px 0px 23px;
     height: 28px;
     margin: 0;
@@ -384,6 +401,10 @@ article3 {
   transition: transform 0.5s ease;
 }
 
+.shopContainer2 {
+  display: none;
+}
+
 // header
 .parks {
   @include titleRules();
@@ -392,11 +413,18 @@ article3 {
 // one off container
 .parksContainer {
   @include singleContainerRules(#000000, 511px);
+  .parkImg2 {
+    display: none;
+  }
 }
 
 .parksContainer:hover .parkImg {
   transform: scale(1.03);
   transition: transform 0.5s ease;
+}
+
+.parksContainer2 {
+  display: none;
 }
 
 // 2 boxes of content
@@ -410,6 +438,9 @@ article3 {
 
   .box5 {
     @include box-rules();
+    .box5Img2 {
+      display: none;
+    }
   }
   .box6 {
     @include box-rules();
@@ -440,6 +471,9 @@ article3 {
         transform: scale(1.03);
         transition: transform 0.5s ease;
       }
+    }
+    .img2 {
+      display: none;
     }
 
     .logoContainer1 {
@@ -492,6 +526,10 @@ article3 {
 .gridContainer2 {
   @include gridRules();
   background-color: #f1f2f3;
+}
+
+.gridContainer3 {
+  display: none;
 }
 
 .followDisney {
@@ -611,6 +649,7 @@ footer {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          max-height: 196px;
         }
 
         img {
@@ -636,5 +675,585 @@ footer {
         }
       }
     }
+  }
+
+  article2 {
+    padding: 8px 23px 16px 23px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f1f2f3;
+    gap: 20px;
+    .box1 {
+      .img1 {
+        display: none;
+      }
+      .img2 {
+        display: initial;
+        width: 100%;
+      }
+      p:first-of-type {
+        font-size: 17.6px;
+      }
+    }
+    .box2 {
+      .img1 {
+        display: none;
+      }
+      .img2 {
+        display: initial;
+        width: 100%;
+      }
+      p:first-of-type {
+        font-size: 17.6px;
+      }
+    }
+    .box3 {
+      .img1 {
+        display: none;
+      }
+      .img2 {
+        display: initial;
+        width: 100%;
+      }
+      p:first-of-type {
+        font-size: 17.6px;
+      }
+    }
+    .box4 {
+      .img1 {
+        display: none;
+      }
+      .img2 {
+        display: initial;
+        width: 100%;
+      }
+      p:first-of-type {
+        font-size: 17.6px;
+      }
+    }
+  }
+
+  .article4 {
+    .box5 {
+      .box5Img {
+        display: none;
+      }
+      .box5Img2 {
+        display: initial;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mandalorianContainer2 {
+    .contentContainerMandolorian2 {
+      padding: 30px 30px 30px 30px;
+    }
+  }
+
+  article2 {
+    padding: 12px 48px 24px 48px;
+  }
+
+  .shop {
+    @include titleRules2();
+  }
+
+  .shopContainer {
+    display: none;
+  }
+
+  .shopContainer2 {
+    display: initial;
+    padding: 12px 48px 24px 48px;
+    position: relative;
+    display: inline-block;
+    background-color: #f1f2f3;
+    .shopImg2 {
+      width: 100%;
+      height: auto;
+    }
+    .infoContainer {
+      display: flex;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 42px 78px 54px 78px;
+      .contentBody {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        .content {
+          max-width: 36%;
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .shopContainer2:hover .shopImg2 {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+  }
+
+  .parks {
+    @include titleRules2();
+  }
+
+  .parksContainer {
+    padding: 12px 48px 0px 48px;
+    .parkImg {
+      display: none;
+    }
+    .parkImg2 {
+      display: initial;
+    }
+  }
+
+  .parksContainer:hover .parkImg2 {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+  }
+
+  .article4 {
+    padding: 12px 48px 0px 48px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    display: none;
+  }
+
+  nav2 {
+    display: initial;
+    height: 65px;
+    max-width: 1600px;
+    padding: 0 0px 0 0px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 95px;
+      height: 40px;
+      padding: 15px 8px 10px 21px;
+      cursor: pointer;
+    }
+    .ul1 {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .li1 {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 2px 10px 11px;
+        font-size: 14px;
+        font-weight: 800;
+        list-style: none;
+        align-items: center;
+        .p1 {
+          margin: 0;
+          padding: 12px 12px 10px 12px;
+        }
+        .subMenu {
+          display: none;
+          position: relative;
+          ul {
+            list-style-type: none;
+            position: absolute;
+            top: 30px;
+            left: -108px;
+            z-index: 1;
+            padding: 0px;
+            width: max-content;
+            li {
+              display: block;
+              background-color: #232b2d;
+              padding: 12px 26px 12px 26px;
+              p {
+                margin: 0;
+                color: #ffffff;
+                font-size: 15px;
+              }
+            }
+            li:first-of-type {
+              padding-top: 28px;
+            }
+            li:last-of-type {
+              padding-bottom: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+  nav2 .ul1 .li1:hover .subMenu {
+    display: block;
+  }
+  nav2 .ul1 .li1:hover .p1 {
+    color: #0077da;
+    cursor: pointer;
+  }
+  nav2 .ul1 .li1 .subMenu ul li:hover p {
+    color: #0077da;
+    cursor: pointer;
+  }
+
+  .mandalorianContainer2 {
+    .contentContainerMandolorian2 {
+      padding: 30px 30px 30px 30px;
+    }
+  }
+
+  article2 {
+    .box1 {
+      border-radius: 0px;
+    }
+    .box2 {
+      border-radius: 0px;
+    }
+    .box3 {
+      border-radius: 0px;
+    }
+    .box4 {
+      border-radius: 0px;
+    }
+  }
+
+  .showsContainer {
+    .imgContainer {
+      .img {
+        display: none;
+      }
+      .img2 {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.03);
+          transition: transform 0.5s ease;
+        }
+      }
+      .logoContainer1 {
+        bottom: 5px;
+      }
+      .logoContainer2 {
+        bottom: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 775px) {
+  .contentContainerMandolorian2 {
+    .contentBody {
+      .contentBodyDetail {
+        .button2 {
+          min-height: 20px;
+          width: 198px;
+          padding: 13px 20px 13px 20px;
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .mandalorianContainer2 {
+    .contentContainerMandolorian2 {
+      padding: 50px 50px 50px 50px;
+      .contentBody {
+        .contentBodyDetail {
+          max-width: 36%;
+        }
+      }
+    }
+  }
+
+  .parksContainer {
+    display: none;
+  }
+
+  .parksContainer2 {
+    display: initial;
+    padding: 12px 48px 0px 48px;
+    position: relative;
+    display: inline-block;
+    background-color: #f1f2f3;
+    .parksImg2 {
+      width: 100%;
+      height: auto;
+    }
+    .infoContainer2 {
+      display: flex;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 42px 78px 54px 78px;
+      .contentBody2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 100%;
+        .content2 {
+          max-height: 100%;
+          max-width: 36%;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          color: #ffffff;
+          p:nth-of-type(2) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .shopContainer2:hover .shopImg2 {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+  }
+
+  .article4 {
+    display: flex;
+    flex-direction: row;
+    .box5 {
+      p:first-of-type {
+        font-size: 17.6px;
+      }
+      p:nth-of-type(2) {
+        font-size: 13.6px;
+      }
+      p:nth-of-type(3) {
+        font-size: 12px;
+      }
+    }
+    .box6 {
+      p:first-of-type {
+        font-size: 17.6px;
+      }
+      p:nth-of-type(2) {
+        font-size: 13.6px;
+      }
+      p:nth-of-type(3) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .gridContainer2 {
+    display: none;
+  }
+
+  .gridContainer3 {
+    display: contents;
+    background-color: #f1f2f3;
+    @include gridRules();
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  article2 {
+    display: flex;
+    flex-direction: row;
+    .box1 {
+      flex-basis: calc(100% / 4);
+      flex-grow: 1;
+      .img2 {
+        width: 100%;
+      }
+
+      p:first-of-type {
+        padding: 20px 20px 0px 20px;
+        margin: 0;
+        font-size: 20px;
+      }
+
+      p:nth-of-type(2) {
+        font-size: 13.3px;
+        padding: 0px 20px 0px 20px;
+        margin: 10.08px 0px 0px 0px;
+        flex-grow: 1;
+      }
+
+      p:nth-of-type(3) {
+        font-size: 12px;
+        padding: 0px 20px 20px 20px;
+        margin: 20px 0px 0px 0px;
+        font-weight: 700;
+      }
+    }
+    .box2 {
+      flex-basis: calc(100% / 4);
+      flex-grow: 1;
+      .img2 {
+        width: 100%;
+      }
+
+      p:first-of-type {
+        padding: 20px 20px 0px 20px;
+        margin: 0;
+        font-size: 20px;
+      }
+
+      p:nth-of-type(2) {
+        font-size: 13.3px;
+        padding: 0px 20px 0px 20px;
+        margin: 10.08px 0px 0px 0px;
+        flex-grow: 1;
+      }
+
+      p:nth-of-type(3) {
+        font-size: 12px;
+        padding: 0px 20px 20px 20px;
+        margin: 20px 0px 0px 0px;
+        font-weight: 700;
+      }
+    }
+    .box3 {
+      flex-basis: calc(100% / 4);
+      flex-grow: 1;
+      .img2 {
+        width: 100%;
+      }
+
+      p:first-of-type {
+        padding: 20px 20px 0px 20px;
+        margin: 0;
+        font-size: 20px;
+      }
+
+      p:nth-of-type(2) {
+        font-size: 13.3px;
+        padding: 0px 20px 0px 20px;
+        margin: 10.08px 0px 0px 0px;
+        flex-grow: 1;
+      }
+
+      p:nth-of-type(3) {
+        font-size: 12px;
+        padding: 0px 20px 20px 20px;
+        margin: 20px 0px 0px 0px;
+        font-weight: 700;
+      }
+    }
+    .box4 {
+      flex-basis: calc(100% / 4);
+      flex-grow: 1;
+      .img2 {
+        width: 100%;
+      }
+
+      p:first-of-type {
+        padding: 20px 20px 0px 20px;
+        margin: 0;
+        font-size: 20px;
+      }
+
+      p:nth-of-type(2) {
+        font-size: 13.3px;
+        padding: 0px 20px 0px 20px;
+        margin: 10.08px 0px 0px 0px;
+        flex-grow: 1;
+      }
+
+      p:nth-of-type(3) {
+        font-size: 12px;
+        padding: 0px 20px 20px 20px;
+        margin: 20px 0px 0px 0px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mandalorianContainer2 {
+    .contentContainerMandolorian2 {
+      padding: 32px 104px 32px 104px;
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  article2 {
+    padding: 20px 80px 40px 80px;
+  }
+
+  article3 {
+    .whatsNew {
+      padding: 40px 80px 0px 80px;
+      width: 864px;
+      height: auto;
+      font-size: 30px;
+    }
+    .gridContainer1 {
+      padding: 20px 80px 40px 80px;
+    }
+    .bannerContainer {
+      padding: 0px 80px 20px 80px;
+      img {
+        width: 864px;
+        height: auto;
+      }
+    }
+  }
+
+  .shopContainer2 {
+    padding: 20px 80px 40px 80px;
+    .infoContainer {
+      padding: 50px 126px 70px 126px;
+    }
+  }
+  .parksContainer2 {
+    padding: 20px 80px 0px 80px;
+    .infoContainer2 {
+      padding: 50px 126px 70px 126px;
+    }
+  }
+
+  .article4 {
+    padding: 20px 80px 40px 80px;
+  }
+
+  .showsContainer {
+    padding: 20px 80px 40px 80px;
+  }
+
+  .gridContainer3 {
+    padding: 20px 80px 40px 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  article2 {
+    padding: 20px 96px 40px 96px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    max-width: 1600px;
+    margin: 0px auto 0px auto;
   }
 }
