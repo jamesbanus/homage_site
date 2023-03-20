@@ -88,16 +88,14 @@ nav2 {
 article1 {
   width: 100%;
   height: auto;
-  display: inline-block;
 }
 article1 .mandalorianContainer {
-  display: block;
   width: 100%;
 }
 article1 .mandalorianContainer .mandalorian {
   width: 100%;
   height: auto;
-  vertical-align: bottom;
+  display: block;
 }
 article1 .contentContainerMandolorian {
   display: flex;

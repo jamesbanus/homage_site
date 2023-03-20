@@ -263,16 +263,14 @@ nav2 {
 article1 {
   width: 100%;
   height: auto;
-  display: inline-block;
 
   .mandalorianContainer {
-    display: block;
     width: 100%;
 
     .mandalorian {
       width: 100%;
       height: auto;
-      vertical-align: bottom;
+      display: block;
     }
   }
 
